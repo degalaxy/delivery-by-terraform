@@ -7,7 +7,7 @@ ENV_FILE=$1
 source $ENV_FILE
 
 echo "Creating database $DB_NAME at $DB_HOST:$DB_PORT"
-../execute-sql-statements.sh $DB_HOST $DB_PORT \
+../execute-sql-statements.sh $DB_HOST $DB_PORT information_schema \
   $DB_USERNAME $DB_PASSWORD \
   "CREATE DATABASE IF NOT EXISTS \`$DB_NAME\`;"
 
